@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export const AddCategory = ({agregarCategories}) => {
 
-    const [inputValue, setInputValue] = useState('One Punch');
+    const [inputValue, setInputValue] = useState('');
 
     const onInputChange = (e) => {
         console.log(e.target.value);
@@ -19,11 +19,11 @@ export const AddCategory = ({agregarCategories}) => {
 
 
   return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={ onSubmit }>
           <input 
               type="text"
               placeholder='Buscar gif'
-              value={inputValue}
+              value={ inputValue }
               onChange={ onInputChange }
           />
       </form>
